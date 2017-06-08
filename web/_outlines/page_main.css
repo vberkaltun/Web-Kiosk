@@ -1,0 +1,27 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#container,
+#container div {
+    height: 100%;
+}
+
+#wrap_main {
+    overflow: hidden;
+    display: block;
+    overflow: auto;
+}
+
+#wrap_left {
+    float: left;
+    width: 70%;
+}
+
+#wrap_right {
+    float: right;
+    width: 30%;
+}
