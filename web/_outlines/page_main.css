@@ -5,9 +5,21 @@ body {
     height: 100%;
 }
 
-#container,
-#container div {
-    height: 100%;
+body {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.571em;
+    letter-spacing: normal;
+    color: gray;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    display: block;
 }
 
 #wrap_main {
@@ -24,4 +36,31 @@ body {
 #wrap_right {
     float: right;
     width: 30%;
+}
+
+.timeline_main {
+    height: 42px;
+    display: table-row;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline_left,
+.timeline_middle,
+.timeline_right {
+    float: left;
+    top: 0;
+}
+
+.timeline_left {
+    text-align: right;
+}
+
+.timeline_middle img {
+    height: 100%;
+    width: 32px;
+}
+
+.timeline_right {
+    text-align: left;
 }
