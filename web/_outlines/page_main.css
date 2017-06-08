@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #1a2065;
+    background-color: #191919;
 }
 
 body {
@@ -16,54 +16,61 @@ body {
     color: gray;
 }
 
-p {
-    margin: 0;
-    padding: 0;
-}
-
-span {
-    display: block;
-}
-
 #wrap_main {
     overflow: hidden;
     display: block;
     overflow: auto;
+    width: 100%;
+    height: 100%;
 }
 
 #wrap_left {
     float: left;
     width: 70%;
+    height: 100%;
 }
 
 #wrap_right {
     float: right;
     width: 30%;
-}
-
-.timeline_main {
-    height: 42px;
-    display: table-row;
-    margin: 0;
-    padding: 0;
-}
-
-.timeline_left,
-.timeline_middle,
-.timeline_right {
-    float: left;
-    top: 0;
-}
-
-.timeline_left {
-    text-align: right;
-}
-
-.timeline_middle img {
     height: 100%;
-    width: 32px;
 }
 
-.timeline_right {
-    text-align: left;
+.inside_left {
+    margin: 30px 15px 30px 30px;
+    width: calc(100% - 40px);
+    height: calc(100% - 60px);
+    /* ADDED BY BERK ALTUN AT 08.06.2017 */
+    background: #396afc;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2948ff, #396afc);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 3px!important;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 1);
+}
+
+.inside_up {
+    margin: 30px 30px 30px 15px;
+    width: calc(100% - 45px);
+    height: calc(50% - 45px);
+    /* ADDED BY BERK ALTUN AT 08.06.2017 */
+    background: #E44D26;
+    background: -webkit-linear-gradient(to right, #F16529, #E44D26);
+    background: linear-gradient(to right, #F16529, #E44D26);
+    border-radius: 3px!important;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 1);
+}
+
+.inside_down {
+    margin: 00px 30px 30px 15px;
+    width: calc(100% - 45px);
+    height: calc(50% - 45px);
+    /* ADDED BY BERK ALTUN AT 08.06.2017 */
+    background: #e52d27;
+    background: -webkit-linear-gradient(to right, #e52d27, #b31217);
+    background: linear-gradient(to right, #e52d27, #b31217);
+    border-radius: 3px!important;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 1);
 }
