@@ -3,11 +3,14 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: #1a2065;
 }
 
 body {
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
+    font-size: 1.125em;
     line-height: 1.571em;
     letter-spacing: normal;
     color: gray;
