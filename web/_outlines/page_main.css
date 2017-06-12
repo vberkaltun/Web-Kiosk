@@ -78,6 +78,20 @@ body {
     background: #10174c;
 }
 
-.main_title {
-    margin: 0.833em;
+
+/* OTHER CSS FILES */
+
+.div_darkening {
+    display: inline-block;
+    border-radius: 0.222em !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.div_weather {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 4.500em;
 }
