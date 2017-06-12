@@ -2,21 +2,21 @@ html,
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
     height: 100%;
+    /* ADDED BY BERK ALTUN AT 12.06.2017 */
     background-color: #dbdbdb;
     color: #dbdbdb;
-}
-
-body {
+    /* ADDED BY BERK ALTUN AT 12.06.2017 */
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.125em;
+    font-size: 1.000em;
     letter-spacing: normal;
 }
 
 
-/* ID CSS FILES */
+/* TABLE CSS FILES */
 
 #table_main {
     overflow: hidden;
@@ -38,9 +38,6 @@ body {
     height: 100%;
 }
 
-
-/* CLASS CSS FILES */
-
 .table_left_middle,
 .table_right_up,
 .table_right_down {
@@ -49,27 +46,33 @@ body {
     box-shadow: 0em 0.111em 0.278em rgba(0, 0, 0, 0.5);
 }
 
+.table_left_middle *,
+.table_right_up *,
+.table_right_down * {
+    margin: 0;
+    padding: 0;
+}
+
 .table_left_middle {
-    margin: 1.667em 1.667em 0.833em 1.667em;
+    margin: 1.667em 0.813em 1.667em 1.667em;
     width: calc(100% - 2.500em);
     height: calc(100% - 3.333em);
     background: #10174c;
 }
 
 .table_right_up {
-    margin: 1.667em 1.667em 1.667em 0.833em;
+    margin: 1.667em 1.667em 0.813em 0.833em;
     width: calc(100% - 2.500em);
     height: calc(60% - 2.500em);
     /* ADDED BY BERK ALTUN AT 11.06.2017 */
-    background-image: url(../_images/_forecast/11.png);
+    background-image: url(../_images/_forecast/42.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: black;
 }
 
 .table_right_down {
-    margin: 0em 1.667em 1.667em 0.833em;
+    margin: 0.813em 1.667em 1.667em 0.833em;
     width: calc(100% - 2.500em);
     height: calc(40% - 2.500em);
     background: #10174c;
