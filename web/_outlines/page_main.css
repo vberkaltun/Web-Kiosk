@@ -42,6 +42,7 @@ body {
 
 .table_weather {
     margin: 1.667em 1.667em 0.813em 0.833em;
+    width: calc(25% - 2.500em);
     /* ADDED BY BERK ALTUN AT 11.06.2017 */
     background-image: url(../_images/_forecast/15.png);
     background-size: cover;
@@ -172,9 +173,4 @@ th {
 
 .space_clear {
     margin: -0.15em 0;
-}
-
-.table_plugin {
-    float: left;
-    width: calc(25% - 2.500em);
 }
