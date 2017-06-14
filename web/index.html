@@ -29,94 +29,125 @@
 <body>
     <div class="table_main">
         <table>
-            <thead>
-                <tr class="div_title">
+            <thead class="div_top">
+                <tr>
                     <th><strong>AUDITORIUM</strong></th>
                     <th><strong>TIME</strong></th>
                     <th><strong>LESSON</strong></th>
+                    <th><strong>STATUS</strong></th>
                     <th><strong>LECTURER</strong></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="div_sub">
                 <tr>
                     <td>Alfreds Futterkiste</td>
                     <td>Maria Anders</td>
-                    <td>Germany</td>
+                    <td><span class="status_outside status_lesson"><span class="status_inside">MAIN-402</span></span>
+                    </td>
+                    <td><span class="status_outside status_active"><span class="status_inside">ACTIVE</span></span>
+                    </td>
                     <td>Peterıs</td>
                 </tr>
                 <tr>
                     <td>Centro comercial Moctezuma </td>
                     <td>Francisco Chang</td>
-                    <td>Mexico</td>
+                    <td><span class="status_outside status_lesson"><span class="status_inside">AUDI-402</span></span>
+                    </td>
+                    <td><span class="status_outside status_active"><span class="status_inside">ACTIVE</span></span>
+                    </td>
                     <td>Ilmars</td>
                 </tr>
                 <tr>
                     <td>Ernst Handel</td>
                     <td>Roland Mendel</td>
-                    <td>Austria</td>
+                    <td><span class="status_outside status_lesson"><span class="status_inside">ITC-402</span></span>
+                    </td>
+                    <td><span class="status_outside status_active"><span class="status_inside">ACTIVE</span></span>
+                    </td>
                     <td>Kangros</td>
                 </tr>
                 <tr>
                     <td>Alfreds Futterkiste</td>
                     <td>Maria Anders</td>
-                    <td>Germany</td>
+                    <td><span class="status_outside status_lesson"><span class="status_inside">AUDI-402</span></span>
+                    </td>
+                    <td><span class="status_outside status_passive"><span class="status_inside">PASSIVE</span></span>
+                    </td>
                     <td>Peterıs</td>
                 </tr>
                 <tr>
                     <td>Centro comercial Moctezuma </td>
                     <td>Francisco Chang</td>
-                    <td>Mexico</td>
+                    <td><span class="status_outside status_lesson"><span class="status_inside">MAIN-402</span></span>
+                    </td>
+                    <td><span class="status_outside status_passive"><span class="status_inside">PASSIVE</span></span>
+                    </td>
                     <td>Ilmars</td>
                 </tr>
                 <tr>
                     <td>Ernst Handel</td>
                     <td>Roland Mendel</td>
-                    <td>Austria</td>
+                    <td><span class="status_outside status_lesson"><span class="status_inside">AUDI-402</span></span>
+                    </td>
+                    <td><span class="status_outside status_passive"><span class="status_inside">PASSIVE</span></span>
+                    </td>
                     <td>Kangros</td>
                 </tr>
                 <tr>
                     <td>Alfreds Futterkiste</td>
                     <td>Maria Anders</td>
-                    <td>Germany</td>
+                    <td><span class="status_outside status_lesson"><span class="status_inside">ITC-402</span></span>
+                    </td>
+                    <td><span class="status_outside status_passive"><span class="status_inside">PASSIVE</span></span>
+                    </td>
                     <td>Peterıs</td>
                 </tr>
                 <tr>
                     <td>Centro comercial Moctezuma </td>
                     <td>Francisco Chang</td>
-                    <td>Mexico</td>
+                    <td><span class="status_outside status_lesson"><span class="status_inside">AUDI-402</span></span>
+                    </td>
+                    <td><span class="status_outside status_passive"><span class="status_inside">PASSIVE</span></span>
+                    </td>
                     <td>Ilmars</td>
                 </tr>
                 <tr>
                     <td>Ernst Handel</td>
                     <td>Roland Mendel</td>
-                    <td>Austria</td>
+                    <td><span class="status_outside status_lesson"><span class="status_inside">MAIN-402</span></span>
+                    </td>
+                    <td><span class="status_outside status_passive"><span class="status_inside">PASSIVE</span></span>
+                    </td>
                     <td>Kangros</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="table_weather">
-        <div class="weather_top">
-            <p class="weather_city"><strong>REZEKNE, </strong>LV</p>
-            <p class="weather_type">PARTY CLOUDLY</p>
-            <p class="weather_temp">25° C</p>
+    <div class="table_plugin">
+        <div class="table_weather">
+            <div class="div_top weather_main">
+                <p class="weather_city"><strong>REZEKNE, </strong>LV</p>
+                <p class="weather_type">PARTY CLOUDLY</p>
+                <p class="weather_temp space_clear">25° C</p>
+            </div>
+            <div class="div_sub weather_humidity">
+                <img src="_images/humidity.svg">
+                <p>30%</p>
+            </div>
+            <div class="div_sub weather_wind">
+                <img src="_images/wind.svg">
+                <p>28.97 KM/H</p>
+            </div>
         </div>
-        <div class="weather_left">
-            <img class="weather_logo" src="_images/humidity.svg">
-            <p class="weather_humidity">30%</p>
-        </div>
-        <div class="weather_right">
-            <img class="weather_logo" src="_images/wind.svg">
-            <p class="weather_wind">28.97 KM/H</p>
+        <div class="table_news">
+            <p class="div_top"><strong>NEWLY</strong></p>
         </div>
     </div>
-    <div class="table_news">
-        <p class="div_title"><strong>NEWLY</strong></p>
-    </div>
-    
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass:100,200,300,400,600,700,800,900&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:100,200,300,400,500,600,700,800,900&amp;subset=latin-ext" rel="stylesheet">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
     <script type="text/javascript" src="_outlines/page_main.js" defer></script>
 </body>

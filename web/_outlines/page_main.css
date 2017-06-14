@@ -22,7 +22,6 @@ body {
 .table_weather,
 .table_news {
     float: left;
-    display: inline-block;
     border-radius: 0.222em;
     box-shadow: 0em 0.111em 0.278em rgba(0, 0, 0, 0.6);
     background: #0c0c0c;
@@ -43,7 +42,6 @@ body {
 
 .table_weather {
     margin: 1.667em 1.667em 0.813em 0.833em;
-    width: calc(25% - 2.500em);
     /* ADDED BY BERK ALTUN AT 11.06.2017 */
     background-image: url(../_images/_forecast/15.png);
     background-size: cover;
@@ -54,39 +52,39 @@ body {
 .table_news {
     margin: 0.813em 1.667em 1.667em 0.833em;
     width: calc(25% - 2.500em);
+    height: calc(60% - 3.333em);
 }
 
 
 /* FORECAST CSS FILES */
 
-.weather_top {
-    padding: 0.813em;
+.weather_main {
     width: calc(100% - 1.625em);
     height: calc(100% - 1.625em);
     /* ADDED BY BERK ALTUN AT 13.06.2017 */
-    display: inline-block;
     border-radius: 0.222em 0.222em 0 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6) !important;
 }
 
-.weather_left,
-.weather_right {
+.weather_humidity img,
+.weather_wind img {
     float: left;
-    font-weight: 200;
-    padding: 0.813em;
-    background: #0c0c0c;
-    color: rgba(255, 255, 255, 0.75);
-    /* ADDED BY BERK ALTUN AT 14.06.2017 */
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
+    height: 1.000em;
+    margin: 0.125em 0.500em 0 0;
 }
 
-.weather_left {
+.weather_humidity,
+.weather_wind {
+    float: left;
+    background: #0c0c0c;
+}
+
+.weather_humidity {
     border-bottom-left-radius: 0.222em;
     width: calc(40% - 1.625em);
 }
 
-.weather_right {
+.weather_wind {
     border-bottom-right-radius: 0.222em;
     width: calc(60% - 1.625em);
 }
@@ -96,17 +94,11 @@ body {
     font-size: 3.750em;
 }
 
-.weather_logo {
-    float: left;
-    height: 1.000em;
-    margin: 0.125em 0.500em 0 0;
-}
 
+/* TOP AND SUB CSS FILES */
 
-/* OTHER CSS FILES */
-
-.div_title {
-    padding: 0.813em !important;
+.div_top {
+    padding: 0.813em;
     border-radius: 0.222em 0.222em 0 0;
     background: rgba(255, 255, 255, 0.05);
     /* ADDED BY BERK ALTUN AT 13.06.2017 */
@@ -115,22 +107,74 @@ body {
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
 }
 
-tr:not(:first-child) {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+.div_sub {
+    padding: 0.813em;
+    /* ADDED BY BERK ALTUN AT 14.06.2017 */
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.875em;
 }
 
-tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.0025);
-    font-weight: 200;
+
+/* STATUS CSS FILES */
+
+.status_outside {
+    display: inline-block;
+    /* ADDED BY BERK ALTUN AT 14.06.2017 */
+    padding: 0 0.5em;
+    border-radius: 0.286em;
 }
+
+.status_inside {
+    font-size: 0.714em !important;
+    font-weight: 900 !important;
+}
+
+.status_active {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.25);
+}
+
+.status_passive {
+    color: #c62828;
+    background: rgba(183, 28, 28, 0.25);
+}
+
+.status_lesson {
+    color: #dbdbdb;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* TABLE CSS FILES */
 
 table {
     border-collapse: collapse;
     width: 100%;
 }
 
+tr:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+tr:nth-child(even) {
+    background-color: c;
+    font-weight: 200;
+}
+
 td,
 th {
-    padding: 0.813em !important;
+    padding: 0.813em 1.000em !important;
     text-align: left;
+}
+
+
+/* OTHER CSS FILES */
+
+.space_clear {
+    margin: -0.15em 0;
+}
+
+.table_plugin {
+    float: left;
+    width: calc(25% - 2.500em);
 }
