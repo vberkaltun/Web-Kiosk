@@ -5,7 +5,7 @@ body {
     width: 100%;
     height: 100%;
     /* ADDED BY BERK ALTUN AT 12.06.2017 */
-    background: #dbdbdb;
+    background-color: #dbdbdb;
     color: #dbdbdb;
     /* ADDED BY BERK ALTUN AT 12.06.2017 */
     font-family: 'Exo 2', sans-serif;
@@ -16,49 +16,70 @@ body {
 }
 
 
-/* TABLE INSIDE CSS FILES */
+/* TABLE MAIN CSS FILES */
 
-.table_main,
-.table_weather,
-.table_news {
+#table_main,
+#table_plugin {
+    overflow: hidden;
+    display: inline-block;
     float: left;
+}
+
+#table_main {
+    width: 75%;
+    height: 100%;
+    /* MERGED BY BERK ALTUN AT 14.06.2017 */
     border-radius: 0.222em;
-    box-shadow: 0em 0.111em 0.278em rgba(0, 0, 0, 0.6);
+    box-shadow: 0em 0.111em 0.278em rgba(0, 0, 0, 0.5);
     background: #0c0c0c;
-}
-
-.table_main *,
-.table_weather *,
-.table_news * {
-    margin: 0;
-    padding: 0;
-}
-
-.table_main {
+    /* MERGED BY BERK ALTUN AT 14.06.2017 */
     margin: 1.667em 0.813em 1.667em 1.667em;
     width: calc(75% - 2.500em);
     height: calc(100% - 3.333em);
 }
 
-.table_weather {
+#table_plugin {
+    width: 25%;
+    height: 100%;
+}
+
+
+/* PLUGIN CSS FILES */
+
+.plugin_weather,
+.plugin_news {
+    display: inline-block;
+    border-radius: 0.222em;
+    box-shadow: 0em 0.111em 0.278em rgba(0, 0, 0, 0.5);
+    background: #0c0c0c;
+}
+
+.plugin_weather *,
+.plugin_news * {
+    margin: 0;
+    padding: 0;
+}
+
+.plugin_weather {
     margin: 1.667em 1.667em 0.813em 0.833em;
+    width: calc(100% - 2.500em);
     /* ADDED BY BERK ALTUN AT 11.06.2017 */
-    background-image: url(../_images/_forecast/15.png);
+    background-image: url(../_images/_forecast/42.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-.table_news {
+.plugin_news {
     margin: 0.813em 1.667em 1.667em 0.833em;
-    width: calc(25% - 2.500em);
-    height: calc(60% - 3.333em);
+    width: calc(100% - 2.500em);
+    height: calc(40% - 2.500em);
 }
 
 
 /* FORECAST CSS FILES */
 
-.weather_main {
+.weather_multiple {
     width: calc(100% - 1.625em);
     height: calc(100% - 1.625em);
     /* ADDED BY BERK ALTUN AT 13.06.2017 */
@@ -66,17 +87,17 @@ body {
     background: rgba(0, 0, 0, 0.6) !important;
 }
 
+.weather_humidity,
+.weather_wind {
+    float: left;
+    background: #0c0c0c;
+}
+
 .weather_humidity img,
 .weather_wind img {
     float: left;
     height: 1.000em;
     margin: 0.125em 0.500em 0 0;
-}
-
-.weather_humidity,
-.weather_wind {
-    float: left;
-    background: #0c0c0c;
 }
 
 .weather_humidity {
@@ -172,9 +193,4 @@ th {
 
 .space_clear {
     margin: -0.15em 0;
-}
-
-.table_plugin {
-    float: left;
-    width: calc(25% - 2.500em);
 }
