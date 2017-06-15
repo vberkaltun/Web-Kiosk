@@ -39,9 +39,9 @@ window.onclick = function (event) {
     }
 }
 
-/* --- DOCUMENT FETCHING --- */
+/* --- WEATHER REFRESH --- */
 
-$(document).ready(function () {
+function getWeather() {
     $.simpleWeather({
         location: 'Rrzekne, LV',
         woeid: '854807',
@@ -68,6 +68,13 @@ $(document).ready(function () {
             $('.weather_main').html('<p class="weather_city"><strong>' + error + '</p>');
         }
     });
+}
+
+/* --- DOCUMENT FETCHING --- */
+
+$(document).ready(function () {
+    getWeather(); //Get the initial weather.
+    setInterval(getWeather, 100000); //Update the weather every 10 minutes.
 });
 
 $(window).resize(function () {
