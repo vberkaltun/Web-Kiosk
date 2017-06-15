@@ -27,14 +27,16 @@ var trigger = document.getElementById("trigger");
 
 // When the user clicks the trigger, open the popup 
 trigger.onclick = function () {
-    $("#popup").fadeTo(500, 1);
-    popup.style.display.delay(500) = "block";
+    $("#popup").fadeTo(500, 1, function () {
+        popup.style.display = "block";
+    });
 }
 
 // When the user clicks anywhere outside of the popup, close it
 window.onclick = function (event) {
     if (event.target == popup) {
-        $("#popup").fadeTo(500, 0);
-        popup.style.display.delay(500) = "none";
+        $("#popup").fadeTo(500, 0, function () {
+            popup.style.display = "none";
+        });
     }
 }
