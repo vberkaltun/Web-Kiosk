@@ -12,13 +12,13 @@ function px(input) {
 
 /* --- POPUP TRIGGER --- */
 
-var popup = document.getElementById('popup');
+var table_popup = document.getElementById('table_popup');
 
 var trigger = document.getElementById('trigger');
 
 trigger.onclick = function () {
-    $('#popup').fadeTo(500, 1, function () {
-        popup.style.display = 'block';
+    $('#table_popup').fadeTo(500, 1, function () {
+        table_popup.style.display = 'block';
     });
 
     $('.table_main').addClass('blur');
@@ -27,9 +27,9 @@ trigger.onclick = function () {
 }
 
 window.onclick = function (event) {
-    if (event.target == popup) {
-        $('#popup').fadeTo(500, 0, function () {
-            popup.style.display = 'none';
+    if (event.target == table_popup) {
+        $('#table_popup').fadeTo(500, 0, function () {
+            table_popup.style.display = 'none';
             $('.table_news').blur();
         });
 
@@ -41,14 +41,14 @@ window.onclick = function (event) {
 
 /* --- WEATHER REFRESH --- */
 
-function getWeather() {
+function loadWeather(location, woeid) {
     $.simpleWeather({
-        location: 'Rrzekne, LV',
-        woeid: '854807',
+        location: location,
+        woeid: woeid,
         unit: 'C',
         success: function (weather) {
-            html = '<p class="weather_city"><strong>' + weather.city.toUpperCase() + ', </strong>' + weather.region.toUpperCase() + '</p>';
-            html += '<p class="weather_type">' + weather.currently.toUpperCase() + '</p>';
+            html = '<p class="weather_city"><strong>' + weather.city + ', </strong>' + weather.region + '</p>';
+            html += '<p class="weather_type">' + weather.currently + '</p>';
             html += '<p class="weather_temp space_clear">' + weather.temp + '&deg;' + weather.units.temp + '</p>';
             $('.weather_main').html(html);
 
@@ -57,7 +57,7 @@ function getWeather() {
             $('.weather_humidity').html(html);
 
             html = '<img src="_images/wind.svg">';
-            html += '<p>' + weather.wind.direction.toUpperCase() + ' ' + weather.wind.speed.toUpperCase() + ' ' + weather.units.speed.toUpperCase() + '</p>';
+            html += '<p>' + weather.wind.direction + ' ' + weather.wind.speed + ' ' + weather.units.speed + '</p>';
             $('.weather_wind').html(html);
 
             /* NEED ATTENTION */
@@ -73,8 +73,20 @@ function getWeather() {
 /* --- DOCUMENT FETCHING --- */
 
 $(document).ready(function () {
-    getWeather(); //Get the initial weather.
-    setInterval(getWeather, 600000); //Update the weather every 10 minutes.
+
+    loadWeather('Rrzekne, LV', '854807');
+
+    //Update the weather every 10 minutes.
+    setInterval(loadWeather('Rrzekne, LV', '854807'), 600000);
+
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            loadWeather(position.coords.latitude + ',' + position.coords.longitude);
+
+            //Update the weather every 10 minutes.
+            setInterval(loadWeather(position.coords.latitude + ',' + position.coords.longitude), 600000);
+        });
+    }
 });
 
 $(window).resize(function () {

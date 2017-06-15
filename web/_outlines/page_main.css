@@ -16,7 +16,6 @@ body {
 }
 
 body {
-    /* ADDED BY BERK ALTUN AT 15.06.2017 */
     min-width: 1300px;
     min-height: 650px;
 }
@@ -27,6 +26,12 @@ body {
 .table_main,
 .table_weather,
 .table_news {
+    transition: 0.5s filter linear;
+    -webkit-transition: 0.5s -webkit-filter linear;
+    -moz-transition: 0.5s -moz-filter linear;
+    -ms-transition: 0.5s -ms-filter linear;
+    -o-transition: 0.5s -o-filter linear;
+    /* ADDED BY BERK ALTUN AT 15.06.2017 */
     float: left;
     border-radius: 0.222em;
     box-shadow: 0em 0.111em 0.278em rgba(0, 0, 0, 0.6);
@@ -73,6 +78,7 @@ body {
     /* ADDED BY BERK ALTUN AT 13.06.2017 */
     border-radius: 0.222em 0.222em 0 0;
     background: rgba(0, 0, 0, 0.6) !important;
+    text-transform: uppercase;
 }
 
 .weather_humidity img,
@@ -183,7 +189,15 @@ th {
 
 /* POPUP CSS FILES */
 
-#popup {
+.blur {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+#table_popup {
     opacity: 0;
     display: none;
     position: fixed;
@@ -195,22 +209,4 @@ th {
     overflow: auto;
     background: rgba(0, 0, 0, 0.6);
     color: #dbdbdb;
-}
-
-.blur {
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px);
-}
-
-.table_main,
-.table_weather,
-.table_news {
-    transition: 0.5s filter linear;
-    -webkit-transition: 0.5s -webkit-filter linear;
-    -moz-transition: 0.5s -moz-filter linear;
-    -ms-transition: 0.5s -ms-filter linear;
-    -o-transition: 0.5s -o-filter linear;
 }
