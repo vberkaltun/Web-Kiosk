@@ -87,12 +87,12 @@ body {
 
 .weather_humidity {
     border-bottom-left-radius: 0.222em;
-    width: calc(40% - 1.625em);
+    width: calc(35% - 1.625em);
 }
 
 .weather_wind {
     border-bottom-right-radius: 0.222em;
-    width: calc(60% - 1.625em);
+    width: calc(65% - 1.625em);
 }
 
 .weather_temp {
