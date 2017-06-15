@@ -179,3 +179,28 @@ th {
 .space_clear {
     margin: -0.15em 0;
 }
+
+
+/* POPUP CSS FILES */
+
+#popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    /* ADDED BY BERK ALTUN AT 15.06.2017 */
+    width: 100%;
+    height: 100%;
+    /* ADDED BY BERK ALTUN AT 15.06.2017 */
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.6);
+    color: #dbdbdb;
+}
+
+
+/*body :not(#unblurred) {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}*/
