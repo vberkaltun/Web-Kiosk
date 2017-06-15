@@ -44,6 +44,9 @@ body {
     margin: 1.667em 0.813em 1.667em 1.667em;
     width: calc(75% - 2.500em);
     height: calc(100% - 3.333em);
+    /* ADDED BY BERK ALTUN AT 15.06.2017 */
+    overflow-y: scroll;
+    display: block;
 }
 
 .table_weather {
