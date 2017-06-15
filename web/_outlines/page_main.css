@@ -15,6 +15,12 @@ body {
     letter-spacing: normal;
 }
 
+body {
+    /* ADDED BY BERK ALTUN AT 15.06.2017 */
+    min-width: 1080px;
+    min-height: 480px;
+}
+
 
 /* TABLE INSIDE CSS FILES */
 
