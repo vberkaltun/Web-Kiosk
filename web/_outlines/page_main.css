@@ -184,6 +184,7 @@ th {
 /* POPUP CSS FILES */
 
 #popup {
+    opacity: 0;
     display: none;
     position: fixed;
     z-index: 1;

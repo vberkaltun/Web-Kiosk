@@ -22,29 +22,19 @@ $(window).resize(function () {
 });
 
 /* WHEN POPUP TRIGGERED */
-
-// Get the popup
 var popup = document.getElementById('popup');
-
-// Get the trigger that opens the popup
 var trigger = document.getElementById("trigger");
-
-// Get the <close> element that closes the popup
-var close = document.getElementsByClassName("close")[0];
 
 // When the user clicks the trigger, open the popup 
 trigger.onclick = function () {
-    popup.style.display = "block";
-}
-
-// When the user clicks on <close> (x), close the popup
-close.onclick = function () {
-    popup.style.display = "none";
+    $("#popup").fadeTo(500, 1);
+    popup.style.display.delay(500) = "block";
 }
 
 // When the user clicks anywhere outside of the popup, close it
 window.onclick = function (event) {
     if (event.target == popup) {
-        popup.style.display = "none";
+        $("#popup").fadeTo(500, 0);
+        popup.style.display.delay(500) = "none";
     }
 }
