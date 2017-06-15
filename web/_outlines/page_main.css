@@ -120,6 +120,10 @@ body {
     font-size: 0.875em;
 }
 
+.space_clear {
+    margin: -0.15em 0;
+}
+
 
 /* STATUS CSS FILES */
 
@@ -171,13 +175,6 @@ td,
 th {
     padding: 0.813em 1.000em !important;
     text-align: left;
-}
-
-
-/* OTHER CSS FILES */
-
-.space_clear {
-    margin: -0.15em 0;
 }
 
 
