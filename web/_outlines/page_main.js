@@ -1,23 +1,24 @@
 /* --- TABLE NEWS RESIZING --- */
 
 function em(input) {
-    var emSize = parseFloat($("body").css("font-size"));
+    var emSize = parseFloat($('body').css('font-size'));
     return (emSize * input);
 }
 
 function px(input) {
-    var emSize = parseFloat($("body").css("font-size"));
+    var emSize = parseFloat($('body').css('font-size'));
     return (input / emSize);
 }
 
 /* --- POPUP TRIGGER --- */
 
 var popup = document.getElementById('popup');
-var trigger = document.getElementById("trigger");
+
+var trigger = document.getElementById('trigger');
 
 trigger.onclick = function () {
-    $("#popup").fadeTo(500, 1, function () {
-        popup.style.display = "block";
+    $('#popup').fadeTo(500, 1, function () {
+        popup.style.display = 'block';
     });
 
     $('.table_main').addClass('blur');
@@ -27,8 +28,8 @@ trigger.onclick = function () {
 
 window.onclick = function (event) {
     if (event.target == popup) {
-        $("#popup").fadeTo(500, 0, function () {
-            popup.style.display = "none";
+        $('#popup').fadeTo(500, 0, function () {
+            popup.style.display = 'none';
             $('.table_news').blur();
         });
 
@@ -49,24 +50,26 @@ $(document).ready(function () {
             html = '<p class="weather_city"><strong>' + weather.city.toUpperCase() + ', </strong>' + weather.region.toUpperCase() + '</p>';
             html += '<p class="weather_type">' + weather.currently.toUpperCase() + '</p>';
             html += '<p class="weather_temp space_clear">' + weather.temp + '&deg;' + weather.units.temp + '</p>';
-            $(".weather_main").html(html);
+            $('.weather_main').html(html);
 
             html = '<img src="_images/humidity.svg">';
             html += '<p>' + weather.humidity + '%</p>';
-            $(".weather_humidity").html(html);
+            $('.weather_humidity').html(html);
 
             html = '<img src="_images/wind.svg">';
             html += '<p>' + weather.wind.direction.toUpperCase() + ' ' + weather.wind.speed.toUpperCase() + ' ' + weather.units.speed.toUpperCase() + '</p>';
-            $(".weather_wind").html(html);
+            $('.weather_wind').html(html);
 
-            $('.table_news').css('height', $("body").height() - $('.table_weather').innerHeight() - em(5.000));
+            /* NEED ATTENTION */
+            $('.table_weather').css('background-image', 'url(../web/_images/_forecast/' + weather.code + '.png)');
+            $('.table_news').css('height', $('body').height() - $('.table_weather').innerHeight() - em(5.000));
         },
         error: function (error) {
-            $(".weather_main").html('<p class="weather_city"><strong>' + error + '</p>');
+            $('.weather_main').html('<p class="weather_city"><strong>' + error + '</p>');
         }
     });
 });
 
 $(window).resize(function () {
-    $('.table_news').css('height', $("body").height() - $('.table_weather').innerHeight() - em(5.000));
+    $('.table_news').css('height', $('body').height() - $('.table_weather').innerHeight() - em(5.000));
 });
