@@ -44,9 +44,8 @@ body {
     margin: 1.667em 0.813em 1.667em 1.667em;
     width: calc(75% - 2.500em);
     height: calc(100% - 3.333em);
-    /* ADDED BY BERK ALTUN AT 15.06.2017 */
-    overflow-y: scroll;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .table_weather {
@@ -159,6 +158,12 @@ body {
 
 
 /* TABLE CSS FILES */
+
+.table_main div {
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+}
 
 table {
     border-collapse: collapse;
