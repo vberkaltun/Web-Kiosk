@@ -30,6 +30,10 @@ trigger.onclick = function () {
     $("#popup").fadeTo(500, 1, function () {
         popup.style.display = "block";
     });
+
+    $('.table_main').addClass('blur');
+    $('.table_weather').addClass('blur');
+    $('.table_news').addClass('blur');
 }
 
 // When the user clicks anywhere outside of the popup, close it
@@ -37,6 +41,11 @@ window.onclick = function (event) {
     if (event.target == popup) {
         $("#popup").fadeTo(500, 0, function () {
             popup.style.display = "none";
+            $('.table_news').blur();
         });
+
+        $('.table_main').removeClass('blur');
+        $('.table_weather').removeClass('blur');
+        $('.table_news').removeClass('blur');
     }
 }

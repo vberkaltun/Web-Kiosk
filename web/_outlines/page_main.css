@@ -194,11 +194,20 @@ th {
     color: #dbdbdb;
 }
 
-
-/*body :not(#unblurred) {
+.blur {
     -webkit-filter: blur(2px);
     -moz-filter: blur(2px);
     -o-filter: blur(2px);
     -ms-filter: blur(2px);
     filter: blur(2px);
-}*/
+}
+
+.table_main,
+.table_weather,
+.table_news {
+    transition: 0.5s filter linear;
+    -webkit-transition: 0.5s -webkit-filter linear;
+    -moz-transition: 0.5s -moz-filter linear;
+    -ms-transition: 0.5s -ms-filter linear;
+    -o-transition: 0.5s -o-filter linear;
+}
