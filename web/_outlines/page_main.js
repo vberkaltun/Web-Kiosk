@@ -1,4 +1,4 @@
-/* --- TABLE NEWS RESIZING --- */
+/* --- NEWS RESIZING --- */
 
 function em(input) {
     var emSize = parseFloat($('body').css('font-size'));
@@ -39,7 +39,7 @@ window.onclick = function (event) {
     }
 }
 
-/* --- TABLE DOCUMENT FETCHING --- */
+/* --- DOCUMENT FETCHING --- */
 
 $(document).ready(function () {
     $.simpleWeather({
