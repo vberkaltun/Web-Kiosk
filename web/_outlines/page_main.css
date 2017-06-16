@@ -74,6 +74,10 @@ body {
 .table_news {
     margin: 0.813em 1.667em 1.667em 0.833em;
     width: calc(25% - 2.500em);
+    height: calc(40% - 2.500em);
+    /* ADDED BY BERK ALTUN AT 15.06.2017 */
+    overflow: hidden;
+    display: block;
 }
 
 
@@ -165,6 +169,11 @@ body {
     background: rgba(183, 28, 28, 0.25);
 }
 
+.status_other {
+    color: #dbdbdb;
+    background: rgba(255, 255, 255, 0.05);
+}
+
 
 /* TABLE CSS FILES */
 
@@ -188,17 +197,17 @@ td {
     text-align: left;
 }
 
-th:nth-child(1),
-td:nth-child(1) {
+.table_main th:nth-child(1),
+.table_main td:nth-child(1) {
     width: 40%;
 }
 
-th:nth-child(2),
-td:nth-child(2) {
+.table_main th:nth-child(2),
+.table_main td:nth-child(2) {
     width: 30%;
 }
 
-th:nth-child(1n+3),
-td:nth-child(1n+3) {
+.table_main th:nth-child(1n+3),
+.table_main td:nth-child(1n+3) {
     width: 15%;
 }
