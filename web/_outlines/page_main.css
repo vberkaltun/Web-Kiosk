@@ -50,7 +50,7 @@ body {
     width: calc(75% - 2.500em);
     height: calc(100% - 3.333em);
     /* ADDED BY BERK ALTUN AT 15.06.2017 */
-    overflow-y: scroll;
+    overflow: hidden;
     display: block;
 }
 
@@ -180,10 +180,25 @@ tr:nth-child(even) {
     font-weight: 200;
 }
 
-td,
-th {
+th,
+td {
     padding: 0.813em 1.000em !important;
     text-align: left;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 40%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 30%;
+}
+
+th:nth-child(1n+3),
+td:nth-child(1n+3) {
+    width: 15%;
 }
 
 
