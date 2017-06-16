@@ -28,7 +28,7 @@ $(document).ready(function () {
 $(window).resize(function () {
 
     // WHEN RESIZING, RESIZE NEWS TABLE ACCORDING TO THE WEATHER TABLE
-    $('.table_news').css('height', $('body').height() - $('.table_weather').innerHeight() - em(5.000));
+    $('.table_news').css('height', $('body').height() - $('.table_weather').outerHeight(true) - em(2.500));
 });
 
 /* --- CHANGE EM TO PX AND PX TO EM --- */
@@ -72,7 +72,7 @@ function loadWeather(location, woeid) {
             $('.table_weather').css('background-image', 'url(../web/_images/_forecast/' + weather.code + '.png)');
 
             // RESIZE NEWS TABLE ACCORDING TO THE WEATHER TABLE
-            $('.table_news').css('height', $('body').height() - $('.table_weather').innerHeight() - em(5.000));
+            $('.table_news').css('height', $('body').height() - $('.table_weather').outerHeight(true) - em(2.500));
         },
         error: function (error) {
             $('.weather_main').html('<p class="weather_city"><strong>' + error + '</p>');
