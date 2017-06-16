@@ -1,13 +1,18 @@
 $(document).ready(function () {
 
+    // FIRST REQUEST
+    requestNews();
+
     // UPDATE THE NOTICES EVERY 10 MINUTES
-    setInterval($('.news_main tbody').load('_outlines/page_data.php'), 30000);
+    setInterval(requestNews(), 30000);
+
+    // ---
 
     // FIRST REQUEST
-    requestData();
+    requestLecture();
 
     // REPEATING REQUEST EVERY 10 MINUTES
-    setInterval(requestData(), 600000);
+    setInterval(requestLecture(), 600000);
 
     // ---
 
@@ -72,7 +77,7 @@ function loadWeather(location, woeid) {
             $('.weather_wind').html(html);
 
             // AT THE SAME TIME CHANGE BACKGROUND IMAGE OF WEATHER TABLE
-            $('.table_weather').css('background-image', 'url(../web/_images/_forecast/' + weather.code + '.png)');
+            $('.table_weather').css('background-image', 'url(../_images/_forecast/' + weather.code + '.png)');
 
             // RESIZE NEWS TABLE ACCORDING TO THE WEATHER TABLE
             $('.table_news').css('height', $('body').height() - $('.table_weather').outerHeight(true) - em(2.500));
@@ -85,7 +90,7 @@ function loadWeather(location, woeid) {
 
 /* --- GET LECTURE DATA AND FILL THE LECTURE TABLE  --- */
 
-function requestData() {
+function requestLecture() {
     $.ajax({
         url: "http://www.ru.lv/scripts/tlns_stundu_saraksts/request.php",
         type: "post",
@@ -100,13 +105,13 @@ function requestData() {
                 if (!Array.isArray(json[i].laiks))
                     json[i].laiks = [json[i].laiks];
                 if (json[i].laiks)
-                    processData(json[i].laiks[0]);
+                    processLecture(json[i].laiks[0]);
             }
         }
     });
 }
 
-function processData(data) {
+function processLecture(data) {
 
     // CHECKING IF THE THERE'S ANY CONTENT
     if (data == null || !data.telpa) return;
@@ -146,4 +151,13 @@ function addLecturer(room, time, lecture, name) {
         ("<td><span class='status_outside status_other'><span class='status_inside'>" + time + "</span></span></td>"),
         ("<td><span class='status_outside status_active'><span class='status_inside'>ACTIVE</span></span></td>"));
     $("#main_lecture").append($row);
+}
+
+/* --- GET NEWS DATA AND FILL THE WEATHER TABLE --- */
+
+function requestNews() {
+        $(".table_news table tbody").empty();
+
+    $('.table_news tbody').load('_outlines/page_data.php');
+
 }
