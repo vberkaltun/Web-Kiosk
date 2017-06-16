@@ -211,3 +211,9 @@ td {
 .table_main td:nth-child(1n+3) {
     width: 15%;
 }
+
+.table_news th:nth-child(2),
+.table_news td:nth-child(2) {
+    width: 40%;
+    text-align: right;
+}
