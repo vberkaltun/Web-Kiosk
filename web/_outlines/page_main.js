@@ -147,17 +147,16 @@ function processLecture(data) {
 function addLecturer(room, time, lecture, name) {
     $row = $("<tr>").append(
         ("<td>" + lecture + "</td>"), ("<td>" + name + "</td>"),
-        ("<td><span class='status_outside status_other'><span class='status_inside'>" + room + "</span></span></td>"),
-        ("<td><span class='status_outside status_other'><span class='status_inside'>" + time + "</span></span></td>"),
-        ("<td><span class='status_outside status_active'><span class='status_inside'>ACTIVE</span></span></td>"));
-    $("#main_lecture").append($row);
+        ("<td><span class='status_outside status_passive'><span class='status_inside'>" + room + "</span></span></td>"),
+        ("<td><span class='status_outside status_active'><span class='status_inside'>" + time + "</span></span></td>"));
+    $(".table_main table tbody").append($row);
 }
 
 /* --- GET NEWS DATA AND FILL THE WEATHER TABLE --- */
 
 function requestNews() {
-        $(".table_news table tbody").empty();
-
+    $(".table_news table tbody").empty();
+    
+    // UPDATE THE NOTICES
     $('.table_news tbody').load('_outlines/page_data.php');
-
 }
