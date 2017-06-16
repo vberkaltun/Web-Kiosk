@@ -43,35 +43,6 @@ function px(input) {
     return (input / emSize);
 }
 
-/* --- SHOW OR HIDE POPUP TABLE --- */
-
-var table_popup = document.getElementById('table_popup');
-
-var trigger = document.getElementById('trigger');
-
-trigger.onclick = function () {
-    $('#table_popup').fadeTo(500, 1, function () {
-        table_popup.style.display = 'block';
-    });
-
-    $('.table_main').addClass('blur');
-    $('.table_weather').addClass('blur');
-    $('.table_news').addClass('blur');
-}
-
-window.onclick = function (event) {
-    if (event.target == table_popup) {
-        $('#table_popup').fadeTo(500, 0, function () {
-            table_popup.style.display = 'none';
-            $('.table_news').blur();
-        });
-
-        $('.table_main').removeClass('blur');
-        $('.table_weather').removeClass('blur');
-        $('.table_news').removeClass('blur');
-    }
-}
-
 /* --- GET WEATHER DATA AND FILL THE WEATHER TABLE --- */
 
 function loadWeather(location, woeid) {
