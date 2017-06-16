@@ -74,10 +74,10 @@ function loadWeather(location, woeid) {
 
 $(document).ready(function () {
 
-    loadWeather('Rrzekne, LV', '854807');
+    loadWeather('Konak, TR', '29393805');
 
     //Update the weather every 10 minutes.
-    setInterval(loadWeather('Rrzekne, LV', '854807'), 600000);
+    setInterval(loadWeather('Konak, TR', '29393805'), 600000);
 
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(function (position) {
