@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    // UPDATE THE NOTICES EVERY 10 MINUTES
+    setInterval($('.news_main tbody').load('_outlines/page_data.php'), 30000);
+
     // FIRST REQUEST
     requestData();
 
