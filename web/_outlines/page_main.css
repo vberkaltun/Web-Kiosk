@@ -16,8 +16,8 @@ body {
 }
 
 body {
-    min-width: 1300px;
-    min-height: 650px;
+    min-width: 1280px;
+    min-height: 540px;
     /* ADDED BY BERK ALTUN AT 16.06.2017 */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
