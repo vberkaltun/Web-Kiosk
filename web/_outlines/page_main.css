@@ -16,8 +16,8 @@ body {
 }
 
 body {
-    min-width: 1300px;
-    min-height: 650px;
+    min-width: 1280px;
+    min-height: 540px;
     /* ADDED BY BERK ALTUN AT 16.06.2017 */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -41,8 +41,11 @@ body {
     /* ADDED BY BERK ALTUN AT 15.06.2017 */
     float: left;
     border-radius: 0.222em;
-    box-shadow: 0em 0.111em 0.278em rgba(0, 0, 0, 0.6);
     background: #0c0c0c;
+    /* ADDED BY BERK ALTUN AT 13.06.2017 */
+    -webkit-box-shadow: 0 0.111em 0.278em rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0.111em 0.278em rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0.111em 0.278em rgba(0, 0, 0, 0.6)
 }
 
 .table_main *,
@@ -74,6 +77,10 @@ body {
 .table_news {
     margin: 0.813em 1.667em 1.667em 0.833em;
     width: calc(25% - 2.500em);
+    height: calc(40% - 2.500em);
+    /* ADDED BY BERK ALTUN AT 15.06.2017 */
+    overflow: hidden;
+    display: block;
 }
 
 
@@ -124,9 +131,9 @@ body {
     border-radius: 0.222em 0.222em 0 0;
     background: rgba(255, 255, 255, 0.05);
     /* ADDED BY BERK ALTUN AT 13.06.2017 */
-    -webkit-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 0.375em 0.250em -0.250em rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 0.375em 0.250em -0.250em rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.375em 0.250em -0.250em rgba(0, 0, 0, 0.25);
 }
 
 .div_sub {
@@ -165,6 +172,11 @@ body {
     background: rgba(183, 28, 28, 0.25);
 }
 
+.status_other {
+    color: #dbdbdb;
+    background: rgba(255, 255, 255, 0.05);
+}
+
 
 /* TABLE CSS FILES */
 
@@ -174,7 +186,7 @@ table {
 }
 
 tr:not(:first-child) {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 0.063em solid rgba(255, 255, 255, 0.05);
 }
 
 tr:nth-child(even) {
@@ -188,19 +200,25 @@ td {
     text-align: left;
 }
 
-th:nth-child(1),
-td:nth-child(1) {
+.table_main th:nth-child(1),
+.table_main td:nth-child(1) {
     width: 40%;
 }
 
-th:nth-child(2),
-td:nth-child(2) {
+.table_main th:nth-child(2),
+.table_main td:nth-child(2) {
     width: 30%;
 }
 
-th:nth-child(1n+3),
-td:nth-child(1n+3) {
+.table_main th:nth-child(1n+3),
+.table_main td:nth-child(1n+3) {
     width: 15%;
+}
+
+.table_news th:nth-child(2),
+.table_news td:nth-child(2) {
+    width: 40%;
+    text-align: right;
 }
 
 
