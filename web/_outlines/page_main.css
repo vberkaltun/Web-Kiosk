@@ -1,30 +1,30 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    /* ADDED BY BERK ALTUN AT 12.06.2017 */
-    background: #dbdbdb;
-    color: #dbdbdb;
-    /* ADDED BY BERK ALTUN AT 12.06.2017 */
-    font-family: 'Exo 2', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.000em;
-    letter-spacing: normal;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	/* ADDED BY BERK ALTUN AT 12.06.2017 */
+	background: #dbdbdb;
+	color: #dbdbdb;
+	/* ADDED BY BERK ALTUN AT 12.06.2017 */
+	font-family: 'Exo 2', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.000em;
+	letter-spacing: normal;
 }
 
 body {
-    min-width: 1280px;
-    min-height: 540px;
-    /* ADDED BY BERK ALTUN AT 16.06.2017 */
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	min-width: 1280px;
+	min-height: 540px;
+	/* ADDED BY BERK ALTUN AT 16.06.2017 */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 
@@ -33,187 +33,187 @@ body {
 .table_main,
 .table_weather,
 .table_news {
-    transition: 0.5s filter linear;
-    -webkit-transition: 0.5s -webkit-filter linear;
-    -moz-transition: 0.5s -moz-filter linear;
-    -ms-transition: 0.5s -ms-filter linear;
-    -o-transition: 0.5s -o-filter linear;
-    /* ADDED BY BERK ALTUN AT 15.06.2017 */
-    float: left;
-    border-radius: 0.222em;
-    box-shadow: 0em 0.111em 0.278em rgba(0, 0, 0, 0.6);
-    background: #0c0c0c;
+	transition: 0.5s filter linear;
+	-webkit-transition: 0.5s -webkit-filter linear;
+	-moz-transition: 0.5s -moz-filter linear;
+	-ms-transition: 0.5s -ms-filter linear;
+	-o-transition: 0.5s -o-filter linear;
+	/* ADDED BY BERK ALTUN AT 15.06.2017 */
+	float: left;
+	border-radius: 0.222em;
+	box-shadow: 0em 0.111em 0.278em rgba(0, 0, 0, 0.6);
+	background: #0c0c0c;
 }
 
 .table_main *,
 .table_weather *,
 .table_news * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .table_main {
-    margin: 1.667em 0.813em 1.667em 1.667em;
-    width: calc(75% - 2.500em);
-    height: calc(100% - 3.333em);
-    /* ADDED BY BERK ALTUN AT 15.06.2017 */
-    overflow: hidden;
-    display: block;
+	margin: 1.667em 0.813em 1.667em 1.667em;
+	width: calc(75% - 2.500em);
+	height: calc(100% - 3.333em);
+	/* ADDED BY BERK ALTUN AT 15.06.2017 */
+	overflow: hidden;
+	display: block;
 }
 
 .table_weather {
-    margin: 1.667em 1.667em 0.813em 0.833em;
-    width: calc(25% - 2.500em);
-    /* ADDED BY BERK ALTUN AT 11.06.2017 */
-    background-image: url(../_images/_forecast/1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+	margin: 1.667em 1.667em 0.813em 0.833em;
+	width: calc(25% - 2.500em);
+	/* ADDED BY BERK ALTUN AT 11.06.2017 */
+	background-image: url(../_images/_forecast/1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .table_news {
-    margin: 0.813em 1.667em 1.667em 0.833em;
-    width: calc(25% - 2.500em);
-    height: calc(40% - 2.500em);
-    /* ADDED BY BERK ALTUN AT 15.06.2017 */
-    overflow: hidden;
-    display: block;
+	margin: 0.813em 1.667em 1.667em 0.833em;
+	width: calc(25% - 2.500em);
+	height: calc(40% - 2.500em);
+	/* ADDED BY BERK ALTUN AT 15.06.2017 */
+	overflow: hidden;
+	display: block;
 }
 
 
 /* FORECAST CSS FILES */
 
 .weather_main {
-    width: calc(100% - 1.625em);
-    height: calc(100% - 1.625em);
-    /* ADDED BY BERK ALTUN AT 13.06.2017 */
-    border-radius: 0.222em 0.222em 0 0;
-    background: rgba(0, 0, 0, 0.6) !important;
-    text-transform: uppercase;
+	width: calc(100% - 1.625em);
+	height: calc(100% - 1.625em);
+	/* ADDED BY BERK ALTUN AT 13.06.2017 */
+	border-radius: 0.222em 0.222em 0 0;
+	background: rgba(0, 0, 0, 0.6) !important;
+	text-transform: uppercase;
 }
 
 .weather_humidity img,
 .weather_wind img {
-    float: left;
-    height: 1.000em;
-    margin: 0.125em 0.500em 0 0;
+	float: left;
+	height: 1.000em;
+	margin: 0.125em 0.500em 0 0;
 }
 
 .weather_humidity,
 .weather_wind {
-    float: left;
-    background: #0c0c0c;
+	float: left;
+	background: #0c0c0c;
 }
 
 .weather_humidity {
-    border-bottom-left-radius: 0.222em;
-    width: calc(35% - 1.625em);
+	border-bottom-left-radius: 0.222em;
+	width: calc(35% - 1.625em);
 }
 
 .weather_wind {
-    border-bottom-right-radius: 0.222em;
-    width: calc(65% - 1.625em);
+	border-bottom-right-radius: 0.222em;
+	width: calc(65% - 1.625em);
 }
 
 .weather_temp {
-    font-weight: 900;
-    font-size: 3.750em;
+	font-weight: 900;
+	font-size: 3.750em;
 }
 
 
 /* TOP AND SUB CSS FILES */
 
 .div_top {
-    padding: 0.813em;
-    border-radius: 0.222em 0.222em 0 0;
-    background: rgba(255, 255, 255, 0.05);
-    /* ADDED BY BERK ALTUN AT 13.06.2017 */
-    -webkit-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
+	padding: 0.813em;
+	border-radius: 0.222em 0.222em 0 0;
+	background: rgba(255, 255, 255, 0.05);
+	/* ADDED BY BERK ALTUN AT 13.06.2017 */
+	-webkit-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
 }
 
 .div_sub {
-    padding: 0.813em;
-    /* ADDED BY BERK ALTUN AT 14.06.2017 */
-    font-family: 'Overpass', sans-serif;
-    font-size: 0.875em;
+	padding: 0.813em;
+	/* ADDED BY BERK ALTUN AT 14.06.2017 */
+	font-family: 'Overpass', sans-serif;
+	font-size: 0.875em;
 }
 
 .space_clear {
-    margin: -0.15em 0;
+	margin: -0.15em 0;
 }
 
 
 /* STATUS CSS FILES */
 
 .status_outside {
-    display: inline-block;
-    /* ADDED BY BERK ALTUN AT 14.06.2017 */
-    padding: 0 0.5em;
-    border-radius: 0.286em;
+	display: inline-block;
+	/* ADDED BY BERK ALTUN AT 14.06.2017 */
+	padding: 0 0.5em;
+	border-radius: 0.286em;
 }
 
 .status_inside {
-    font-size: 0.714em !important;
-    font-weight: 900 !important;
+	font-size: 0.714em !important;
+	font-weight: 900 !important;
 }
 
 .status_active {
-    color: #4CAF50;
-    background: rgba(76, 175, 80, 0.25);
+	color: #4CAF50;
+	background: rgba(76, 175, 80, 0.25);
 }
 
 .status_passive {
-    color: #c62828;
-    background: rgba(183, 28, 28, 0.25);
+	color: #c62828;
+	background: rgba(183, 28, 28, 0.25);
 }
 
 .status_other {
-    color: #dbdbdb;
-    background: rgba(255, 255, 255, 0.05);
+	color: #dbdbdb;
+	background: rgba(255, 255, 255, 0.05);
 }
 
 
 /* TABLE CSS FILES */
 
 table {
-    border-collapse: collapse;
-    width: 100%;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 tr:not(:first-child) {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 tr:nth-child(even) {
-    background-color: c;
-    font-weight: 200;
+	background-color: c;
+	font-weight: 200;
 }
 
 th,
 td {
-    padding: 0.813em 1.000em !important;
-    text-align: left;
+	padding: 0.813em 1.000em !important;
+	text-align: left;
 }
 
 .table_main th:nth-child(1),
 .table_main td:nth-child(1) {
-    width: 40%;
+	width: 40%;
 }
 
 .table_main th:nth-child(2),
 .table_main td:nth-child(2) {
-    width: 30%;
+	width: 30%;
 }
 
 .table_main th:nth-child(1n+3),
 .table_main td:nth-child(1n+3) {
-    width: 15%;
+	width: 15%;
 }
 
 .table_news th:nth-child(2),
 .table_news td:nth-child(2) {
-    width: 40%;
-    text-align: right;
+	width: 40%;
+	text-align: right;
 }
