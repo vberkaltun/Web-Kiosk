@@ -1,14 +1,14 @@
 $(document).ready(function () {
 
-    // FIRST REQUEST
+    // FIRST REQUEST OF THE LECTURES
     requestData();
 
-    // REPEATING REQUEST EVERY 10 MINUTES
+    // UPDATE THE LECTURES EVERY 10 MINUTES
     setInterval(requestData(), 600000);
 
     // ---
 
-    // FIRST REQUEST
+    // FIRST REQUEST OF THE WEATHER
     loadWeather('Konak, TR', '29393805');
 
     // UPDATE THE WEATHER EVERY 10 MINUTES
