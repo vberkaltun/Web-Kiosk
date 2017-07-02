@@ -77,7 +77,7 @@ function loadWeather(location, woeid) {
 			$('.weather_wind').html(html);
 
 			// AT THE SAME TIME CHANGE BACKGROUND IMAGE OF WEATHER TABLE
-			$('.table_weather').css('background-image', 'url(../_images/_forecast/' + weather.code + '.png)');
+			$('.table_weather').css('background-image', 'url(../web/_images/_forecast/' + weather.code + '.png)');
 
 			// RESIZE NEWS TABLE ACCORDING TO THE WEATHER TABLE
 			$('.table_news').css('height', $('body').height() - $('.table_weather').outerHeight(true) - em(2.500));
