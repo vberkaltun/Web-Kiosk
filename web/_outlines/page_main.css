@@ -87,7 +87,7 @@ body {
 /* FORECAST CSS FILES */
 
 .weather_main {
-	width: calc(100% - 1.625em);
+	width: calc(100% - 2.000em);
 	height: calc(100% - 1.625em);
 	/* ADDED BY BERK ALTUN AT 13.06.2017 */
 	border-radius: 0.222em 0.222em 0 0;
@@ -110,12 +110,14 @@ body {
 
 .weather_humidity {
 	border-bottom-left-radius: 0.222em;
-	width: calc(35% - 1.625em);
+	padding-right: 0 !important;
+	width: calc(35% - 1.000em);
 }
 
 .weather_wind {
 	border-bottom-right-radius: 0.222em;
-	width: calc(65% - 1.625em);
+	padding-left: 0 !important;
+	width: calc(65% - 1.000em);
 }
 
 .weather_temp {
@@ -127,7 +129,7 @@ body {
 /* TOP AND SUB CSS FILES */
 
 .div_top {
-	padding: 0.813em;
+	padding: 0.813em 1.000em;
 	border-radius: 0.222em 0.222em 0 0;
 	background: rgba(255, 255, 255, 0.05);
 	/* ADDED BY BERK ALTUN AT 13.06.2017 */
@@ -137,7 +139,7 @@ body {
 }
 
 .div_sub {
-	padding: 0.813em;
+	padding: 0.813em 1.000em;
 	/* ADDED BY BERK ALTUN AT 14.06.2017 */
 	font-family: 'Overpass', sans-serif;
 	font-size: 0.875em;
