@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // FIRST REQUEST
+    // FIRST REQUEST OF THE NOTICES
     requestNews();
 
     // UPDATE THE NOTICES EVERY 10 MINUTES
@@ -8,15 +8,15 @@ $(document).ready(function () {
 
     // ---
 
-    // FIRST REQUEST
+    // FIRST REQUEST OF THE LECTURES
     requestLecture();
 
-    // REPEATING REQUEST EVERY 10 MINUTES
+    // UPDATE THE LECTURES EVERY 10 MINUTES
     setInterval(requestLecture(), 600000);
 
     // ---
 
-    // FIRST REQUEST
+    // FIRST REQUEST OF THE WEATHER
     loadWeather('Konak, TR', '29393805');
 
     // UPDATE THE WEATHER EVERY 10 MINUTES
@@ -88,7 +88,7 @@ function loadWeather(location, woeid) {
     });
 }
 
-/* --- GET LECTURE DATA AND FILL THE LECTURE TABLE  --- */
+/* --- GET LECTURE DATA AND FILL THE LECTURE TABLE --- */
 
 function requestLecture() {
     $.ajax({
