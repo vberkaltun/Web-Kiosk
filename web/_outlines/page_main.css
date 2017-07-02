@@ -41,8 +41,11 @@ body {
 	/* ADDED BY BERK ALTUN AT 15.06.2017 */
 	float: left;
 	border-radius: 0.222em;
-	box-shadow: 0em 0.111em 0.278em rgba(0, 0, 0, 0.6);
 	background: #0c0c0c;
+	/* ADDED BY BERK ALTUN AT 13.06.2017 */
+	-webkit-box-shadow: 0 0.111em 0.278em rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0 0.111em 0.278em rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0.111em 0.278em rgba(0, 0, 0, 0.6)
 }
 
 .table_main *,
@@ -128,9 +131,9 @@ body {
 	border-radius: 0.222em 0.222em 0 0;
 	background: rgba(255, 255, 255, 0.05);
 	/* ADDED BY BERK ALTUN AT 13.06.2017 */
-	-webkit-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
-	-moz-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
-	box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 0.375em 0.250em -0.250em rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 0.375em 0.250em -0.250em rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0.375em 0.250em -0.250em rgba(0, 0, 0, 0.25);
 }
 
 .div_sub {
@@ -183,7 +186,7 @@ table {
 }
 
 tr:not(:first-child) {
-	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	border-top: 0.063em solid rgba(255, 255, 255, 0.05);
 }
 
 tr:nth-child(even) {
