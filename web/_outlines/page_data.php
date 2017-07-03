@@ -1,7 +1,13 @@
 <?php
 	$conn = new mysqli('localhost','root','root','kiosk');
 	if($conn -> connect_error){
-		die("Connection error: ". $conn -> connect_error);
+		echo "<tr><td>";
+		echo $conn -> connect_error;
+		echo "</td><td><span class='status_outside status_passive'><span class='status_inside'>";
+		echo "Connection Error";
+		echo "</span></span></td></tr>";
+		
+		exit();
 	}
 
 	$result = $conn -> query("SELECT * FROM notices WHERE endDate >= CURDATE()");
