@@ -4,7 +4,7 @@ $(document).ready(function () {
 	requestNews();
 
 	// UPDATE THE NOTICES EVERY 10 MINUTES
-	setInterval(requestNews(), 30000);
+	setInterval(requestNews(), 600000);
 
 	// ---
 
