@@ -17,7 +17,7 @@ Vivaldi | :heavy_check_mark: | Tested on 1.9+ | Passed successfully.
 
 ### Testing
 
-You can use [MAMP](https://www.mamp.info) for server-side for your testing on your local host. At this point, We preferred to use version 3.3.0 of MAMP. We recommend you to use this version of MAMP for testing without having a problem.
+You can use [MAMP](https://www.mamp.info) for server-side for your testing on your local host. At this point, We preferred to use version 3.3.0 of MAMP. For a better testing without having a problem, we recommend you to use this version of MAMP.
 
 Due to lack of resources on server-side, we could not test this project in real life. We worked on the local server with MAMP throughout the project lifespan.
 
