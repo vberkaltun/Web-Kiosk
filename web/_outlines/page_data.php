@@ -1,5 +1,5 @@
 <?php
-	$conn = new mysqli('localhost','root','root','kiosk');
+	$conn = new mysqli("localhost","root","root","kiosk");
 	if($conn -> connect_error){
 		echo "<tr><td>";
 		echo $conn -> connect_error;
@@ -14,9 +14,9 @@
 	if($result -> num_rows > 0){
 		while($row = $result -> fetch_assoc()){
             echo "<tr><td>";
-			echo $row['content'];
+			echo $row["content"];
             echo "</td><td><span class='status_outside status_other'><span class='status_inside'>";
-            echo $row['endDate'];
+            echo $row["endDate"];
             echo "</span></span></td></tr>";
 		}
 	}

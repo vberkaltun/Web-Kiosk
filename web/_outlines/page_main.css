@@ -8,7 +8,7 @@ body {
 	background: #dbdbdb;
 	color: #dbdbdb;
 	/* ADDED BY BERK ALTUN AT 12.06.2017 */
-	font-family: 'Exo 2', sans-serif;
+	font-family: "Exo 2", sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 1.000em;
@@ -123,6 +123,8 @@ body {
 .weather_temp {
 	font-weight: 900;
 	font-size: 3.750em;
+	/* ADDED BY BERK ALTUN AT 10.07.2017 */
+	margin: -0.15em 0;
 }
 
 
@@ -141,12 +143,8 @@ body {
 .div_sub {
 	padding: 0.813em 1.000em;
 	/* ADDED BY BERK ALTUN AT 14.06.2017 */
-	font-family: 'Overpass', sans-serif;
+	font-family: "Overpass", sans-serif;
 	font-size: 0.875em;
-}
-
-.space_clear {
-	margin: -0.15em 0;
 }
 
 
@@ -221,4 +219,28 @@ td {
 .table_news td:nth-child(2) {
 	width: 40%;
 	text-align: right;
+}
+
+
+/* POPUP CSS FILES */
+
+#page_back {
+	width: 100%;
+	height: 100%;
+	/* ADDED BY BERK ALTUN AT 10.07.2017 */
+	display: inline;
+}
+
+#page_front {
+	opacity: 0;
+	display: none;
+	position: fixed;
+	z-index: 1;
+	/* ADDED BY BERK ALTUN AT 15.06.2017 */
+	width: 100%;
+	height: 100%;
+	/* ADDED BY BERK ALTUN AT 15.06.2017 */
+	overflow: auto;
+	background: rgba(12, 12, 12, 0.95);
+	color: #dbdbdb;
 }
