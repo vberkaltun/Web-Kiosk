@@ -27,6 +27,11 @@ body {
 	user-select: none;
 }
 
+input {
+	border-width: 0px;
+	border: none;
+}
+
 
 /* TABLE INSIDE CSS FILES */
 
@@ -66,6 +71,12 @@ body {
 	margin: 0.813em 1.625em 1.625em 0.813em;
 	width: calc(25% - 2.438em);
 	height: calc(40% - 2.438em);
+}
+
+.taple_admin {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 
@@ -111,8 +122,8 @@ body {
 
 .div_top {
 	padding: 0.813em 1.000em;
-	font-family: "Exo 2", sans-serif;
 	background: rgba(255, 255, 255, 0.05);
+	font-family: "Exo 2", sans-serif;
 	/* ADDED BY BERK ALTUN AT 13.06.2017 */
 	-webkit-box-shadow: 0 0.375em 0.250em -0.250em rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0 0.375em 0.250em -0.250em rgba(0, 0, 0, 0.25);
@@ -221,6 +232,37 @@ td {
 	position: fixed;
 	/* ADDED BY BERK ALTUN AT 15.06.2017 */
 	overflow: auto;
-	background: rgba(12, 12, 12, 0.05);
+	background: rgba(12, 12, 12, 0.95);
 	color: #dbdbdb;
+}
+
+
+/* POPUP CSS FILES */
+
+.admin_main {
+	width: 25%;
+	/* ADDED BY BERK ALTUN AT 15.06.2017 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.admin_username,
+.admin_password,
+.admin_submit {
+	font-family: "Overpass", sans-serif;
+	padding: 0.875em 1.000em !important;
+	border-radius: 0.188em;
+}
+
+.admin_username,
+.admin_password {
+	margin-bottom: 1.625em;
+	width: calc(100% - 2.000em);
+}
+
+.admin_submit {
+	margin-bottom: 0;
+	width: 33%;
 }
