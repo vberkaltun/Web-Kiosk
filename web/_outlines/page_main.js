@@ -50,20 +50,8 @@ $(document).click(function () {
 $(window).resize(function () {
 
 	// WHEN RESIZING, RESIZE NEWS TABLE ACCORDING TO THE WEATHER TABLE
-	$(".table_news").css("height", $("body").height() - $(".table_weather").outerHeight(true) - em(2.500));
+	$(".table_news").css("height", $("body").height() - $(".table_weather").outerHeight(true) - parseFloat($(".table_weather").css("margin-top")) - parseFloat($(".table_weather").css("margin-bottom")));
 });
-
-/* --- CHANGE EM TO PX AND PX TO EM --- */
-
-function em(input) {
-	var emSize = parseFloat($("body").css("font-size"));
-	return (emSize * input);
-}
-
-function px(input) {
-	var emSize = parseFloat($("body").css("font-size"));
-	return (input / emSize);
-}
 
 /* --- GET WEATHER DATA AND FILL THE WEATHER TABLE --- */
 
@@ -94,10 +82,13 @@ function loadWeather(location, woeid) {
 			$(".table_weather").css("background-image", "url(../web/_images/_forecast/" + weather.code + ".png)");
 
 			// RESIZE NEWS TABLE ACCORDING TO THE WEATHER TABLE
-			$(".table_news").css("height", $("body").height() - $(".table_weather").outerHeight(true) - em(2.500));
+			$(".table_news").css("height", $("body").height() - $(".table_weather").outerHeight(true) - parseFloat($(".table_weather").css("margin-top")) - parseFloat($(".table_weather").css("margin-bottom")));
 		},
 		error: function (error) {
 			$(".weather_main").html("<p class='weather_city'><strong>" + error + "</p>");
+
+			// RESIZE NEWS TABLE ACCORDING TO THE WEATHER TABLE
+			$(".table_news").css("height", $("body").height() - $(".table_weather").outerHeight(true) - parseFloat($(".table_weather").css("margin-top")) - parseFloat($(".table_weather").css("margin-bottom")));
 		}
 	});
 }
