@@ -1,9 +1,9 @@
 html,
 body {
-	margin: 0;
-	padding: 0;
 	width: 100%;
 	height: 100%;
+	min-width: 1280px;
+	min-height: 540px;
 	/* ADDED BY BERK ALTUN AT 12.06.2017 */
 	background: #dbdbdb;
 	color: #dbdbdb;
@@ -11,13 +11,13 @@ body {
 	font-family: "Exo 2", sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 1.000em;
+	font-size: 0.938em;
 	letter-spacing: normal;
 }
 
-body {
-	min-width: 1280px;
-	min-height: 540px;
+* {
+	margin: 0;
+	padding: 0;
 	/* ADDED BY BERK ALTUN AT 16.06.2017 */
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -33,40 +33,28 @@ body {
 .table_main,
 .table_weather,
 .table_news {
-	transition: 0.5s filter linear;
-	-webkit-transition: 0.5s -webkit-filter linear;
-	-moz-transition: 0.5s -moz-filter linear;
-	-ms-transition: 0.5s -ms-filter linear;
-	-o-transition: 0.5s -o-filter linear;
-	/* ADDED BY BERK ALTUN AT 15.06.2017 */
 	float: left;
-	border-radius: 0.222em;
+	border-radius: 0.188em;
 	background: #0c0c0c;
 	/* ADDED BY BERK ALTUN AT 13.06.2017 */
-	-webkit-box-shadow: 0 0.111em 0.278em rgba(0, 0, 0, 0.6);
-	-moz-box-shadow: 0 0.111em 0.278em rgba(0, 0, 0, 0.6);
-	box-shadow: 0 0.111em 0.278em rgba(0, 0, 0, 0.6)
-}
-
-.table_main *,
-.table_weather *,
-.table_news * {
-	margin: 0;
-	padding: 0;
-}
-
-.table_main {
-	margin: 1.667em 0.813em 1.667em 1.667em;
-	width: calc(75% - 2.500em);
-	height: calc(100% - 3.333em);
+	-webkit-box-shadow: 0 0.063em 0.250em rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0 0.063em 0.250em rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0.063em 0.250em rgba(0, 0, 0, 0.6);
 	/* ADDED BY BERK ALTUN AT 15.06.2017 */
 	overflow: hidden;
 	display: block;
 }
 
+.table_main {
+	margin: 1.625em 0.813em 1.625em 1.625em;
+	width: calc(75% - 2.438em);
+	height: calc(100% - 3.250em);
+}
+
 .table_weather {
-	margin: 1.667em 1.667em 0.813em 0.833em;
-	width: calc(25% - 2.500em);
+	margin: 1.625em 1.625em 0.813em 0.813em;
+	width: calc(25% - 2.438em);
+	text-transform: uppercase;
 	/* ADDED BY BERK ALTUN AT 11.06.2017 */
 	background-image: url(../_images/_forecast/1.png);
 	background-size: cover;
@@ -75,24 +63,17 @@ body {
 }
 
 .table_news {
-	margin: 0.813em 1.667em 1.667em 0.833em;
-	width: calc(25% - 2.500em);
-	height: calc(40% - 2.500em);
-	/* ADDED BY BERK ALTUN AT 15.06.2017 */
-	overflow: hidden;
-	display: block;
+	margin: 0.813em 1.625em 1.625em 0.813em;
+	width: calc(25% - 2.438em);
+	height: calc(40% - 2.438em);
 }
 
 
 /* FORECAST CSS FILES */
 
 .weather_main {
-	width: calc(100% - 2.000em);
-	height: calc(100% - 1.625em);
-	/* ADDED BY BERK ALTUN AT 13.06.2017 */
-	border-radius: 0.222em 0.222em 0 0;
+	border-radius: 0.188em 0.188em 0 0;
 	background: rgba(0, 0, 0, 0.6) !important;
-	text-transform: uppercase;
 }
 
 .weather_humidity img,
@@ -109,22 +90,21 @@ body {
 }
 
 .weather_humidity {
-	border-bottom-left-radius: 0.222em;
 	padding-right: 0 !important;
+	border-bottom-left-radius: 0.188em;
 	width: calc(35% - 1.000em);
 }
 
 .weather_wind {
-	border-bottom-right-radius: 0.222em;
 	padding-left: 0 !important;
+	border-bottom-right-radius: 0.188em;
 	width: calc(65% - 1.000em);
 }
 
 .weather_temp {
 	font-weight: 900;
 	font-size: 3.750em;
-	/* ADDED BY BERK ALTUN AT 10.07.2017 */
-	margin: -0.15em 0;
+	margin: -0.125em 0;
 }
 
 
@@ -132,7 +112,7 @@ body {
 
 .div_top {
 	padding: 0.813em 1.000em;
-	border-radius: 0.222em 0.222em 0 0;
+	border-radius: 0.188em 0.188em 0 0;
 	background: rgba(255, 255, 255, 0.05);
 	/* ADDED BY BERK ALTUN AT 13.06.2017 */
 	-webkit-box-shadow: 0 0.375em 0.250em -0.250em rgba(0, 0, 0, 0.25);
@@ -142,9 +122,7 @@ body {
 
 .div_sub {
 	padding: 0.813em 1.000em;
-	/* ADDED BY BERK ALTUN AT 14.06.2017 */
 	font-family: "Overpass", sans-serif;
-	font-size: 0.875em;
 }
 
 
@@ -153,12 +131,12 @@ body {
 .status_outside {
 	display: inline-block;
 	/* ADDED BY BERK ALTUN AT 14.06.2017 */
-	padding: 0 0.5em;
-	border-radius: 0.286em;
+	padding: 0 0.500em;
+	border-radius: 0.250em;
 }
 
 .status_inside {
-	font-size: 0.714em !important;
+	font-size: 0.688em !important;
 	font-weight: 900 !important;
 }
 
@@ -190,8 +168,13 @@ tr:not(:first-child) {
 }
 
 tr:nth-child(even) {
-	background-color: c;
+	background-color: rgba(255, 255, 255, 0.0025);
 	font-weight: 200;
+}
+
+th:first-child {
+	padding: 0.875em 1.000em !important;
+	text-align: left;
 }
 
 th,
@@ -222,20 +205,19 @@ td {
 }
 
 
-/* POPUP CSS FILES */
+/* PAGE CSS FILES */
 
 #page_back {
+	display: inline;
+	/* ADDED BY BERK ALTUN AT 10.07.2017 */
 	width: 100%;
 	height: 100%;
-	/* ADDED BY BERK ALTUN AT 10.07.2017 */
-	display: inline;
 }
 
 #page_front {
 	opacity: 0;
 	display: none;
 	position: fixed;
-	z-index: 1;
 	/* ADDED BY BERK ALTUN AT 15.06.2017 */
 	width: 100%;
 	height: 100%;
