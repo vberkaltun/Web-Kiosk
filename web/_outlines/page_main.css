@@ -8,7 +8,7 @@ body {
 	background: #dbdbdb;
 	color: #dbdbdb;
 	/* ADDED BY BERK ALTUN AT 12.06.2017 */
-	font-family: "Exo 2", sans-serif;
+	font-family: "Overpass", sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 0.938em;
@@ -72,7 +72,6 @@ body {
 /* FORECAST CSS FILES */
 
 .weather_main {
-	border-radius: 0.188em 0.188em 0 0;
 	background: rgba(0, 0, 0, 0.6) !important;
 }
 
@@ -112,7 +111,7 @@ body {
 
 .div_top {
 	padding: 0.813em 1.000em;
-	border-radius: 0.188em 0.188em 0 0;
+	font-family: "Exo 2", sans-serif;
 	background: rgba(255, 255, 255, 0.05);
 	/* ADDED BY BERK ALTUN AT 13.06.2017 */
 	-webkit-box-shadow: 0 0.375em 0.250em -0.250em rgba(0, 0, 0, 0.25);
@@ -122,7 +121,6 @@ body {
 
 .div_sub {
 	padding: 0.813em 1.000em;
-	font-family: "Overpass", sans-serif;
 }
 
 
@@ -207,11 +205,14 @@ td {
 
 /* PAGE CSS FILES */
 
-#page_back {
-	display: inline;
-	/* ADDED BY BERK ALTUN AT 10.07.2017 */
+#page_back,
+#page_front {
 	width: 100%;
 	height: 100%;
+}
+
+#page_back {
+	display: inline;
 }
 
 #page_front {
@@ -219,10 +220,7 @@ td {
 	display: none;
 	position: fixed;
 	/* ADDED BY BERK ALTUN AT 15.06.2017 */
-	width: 100%;
-	height: 100%;
-	/* ADDED BY BERK ALTUN AT 15.06.2017 */
 	overflow: auto;
-	background: rgba(12, 12, 12, 0.95);
+	background: rgba(12, 12, 12, 0.05);
 	color: #dbdbdb;
 }
