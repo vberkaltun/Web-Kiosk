@@ -231,11 +231,7 @@ td {
 }
 
 #page_front {
-	opacity: 0;
-	display: none;
-	position: fixed;
-	/* ADDED BY BERK ALTUN AT 15.06.2017 */
-	overflow: auto;
+    position:absolute;
 	background: rgba(12, 12, 12, 0.95);
 	color: #dbdbdb;
 }
