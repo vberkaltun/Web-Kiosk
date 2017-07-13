@@ -59,12 +59,13 @@ input {
 .table_weather {
 	margin: 1.625em 1.625em 0.813em 0.813em;
 	width: calc(25% - 2.438em);
-	text-transform: uppercase;
 	/* ADDED BY BERK ALTUN AT 11.06.2017 */
 	background-image: url(../_images/_forecast/1.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	/* ADDED BY BERK ALTUN AT 13.07.2017 */
+	text-transform: uppercase;
 }
 
 .table_news {
@@ -74,9 +75,12 @@ input {
 }
 
 .taple_admin {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	width: 25%;
+	/* ADDED BY BERK ALTUN AT 15.06.2017 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 
@@ -239,21 +243,17 @@ td {
 
 /* POPUP CSS FILES */
 
-.admin_main {
-	width: 25%;
-	/* ADDED BY BERK ALTUN AT 15.06.2017 */
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
 .admin_username,
 .admin_password,
 .admin_submit {
+	float: right;
 	font-family: "Overpass", sans-serif;
 	padding: 0.875em 1.000em !important;
 	border-radius: 0.188em;
+	/* ADDED BY BERK ALTUN AT 13.06.2017 */
+	-webkit-box-shadow: 0 0.063em 0.250em rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0 0.063em 0.250em rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0.063em 0.250em rgba(0, 0, 0, 0.6);
 }
 
 .admin_username,
@@ -263,6 +263,10 @@ td {
 }
 
 .admin_submit {
+	background: #4CAF50;
+	color: #dbdbdb;
+	font-weight: 900 !important;
+	/* ADDED BY BERK ALTUN AT 13.07.2017 */
 	margin-bottom: 0;
 	width: 33%;
 }
