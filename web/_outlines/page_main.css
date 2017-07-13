@@ -224,14 +224,10 @@ td {
 #page_front {
 	width: 100%;
 	height: 100%;
-}
-
-#page_back {
-	display: inline;
+	position: absolute;
 }
 
 #page_front {
-    position:absolute;
 	background: rgba(12, 12, 12, 0.95);
 	color: #dbdbdb;
 }
