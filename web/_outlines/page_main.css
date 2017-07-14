@@ -265,3 +265,23 @@ td {
 	margin-bottom: 0;
 	width: 33%;
 }
+
+
+/* SHRINK CSS FILES */
+
+.delay {
+	transition-duration: 400ms;
+	-ms-transition-duration: 400ms;
+	-webkit-transition-duration: 400ms;
+	-o-transition-duration: 400ms;
+	-moz-transition-duration: 400ms;
+}
+
+.shrink {
+	opacity: 0;
+	transform: scale(0.95, 0.95);
+	-ms-transform: scale(0.95, 0.95);
+	-webkit-transform: scale(0.95, 0.95);
+	-o-transform: scale(0.95, 0.95);
+	-moz-transform: scale(0.95, 0.95);
+}

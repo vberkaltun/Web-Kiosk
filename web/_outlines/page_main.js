@@ -34,15 +34,18 @@ $(document).ready(function () {
 });
 
 $(document).click(function () {
-	if ($("#page_front").css("opacity") == 0) {
-		$("#page_front").fadeTo(500, 1, function () {
-			page_front.style.display = "block";
+
+	// WHEN CONTROL KEY IS PRESSED AND ADMIN PANEL IS DISABLED
+	if ($("#page_front").css("opacity") == 0 && window.event.ctrlKey) {
+		$('#page_front').show(0, function () {
+			$('#page_front').removeClass('shrink');
 		});
 	}
 
-	if ($("#page_front").css("opacity") == 1) {
-		$("#page_front").fadeTo(500, 0, function () {
-			page_front.style.display = "none";
+	// WHEN CONTROL KEY IS PRESSED AND ADMIN PANEL IS ENABLED
+	if ($("#page_front").css("opacity") == 1 && window.event.ctrlKey) {
+		$('#page_front').show(0, function () {
+			$('#page_front').addClass('shrink');
 		});
 	}
 });
